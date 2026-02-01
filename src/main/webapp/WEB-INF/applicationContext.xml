@@ -5,4 +5,7 @@
 
     <bean id="greetingService" class="com.codegym.c06springgreeting.service.GreetingService">
     </bean>
+
+    <bean id="employeeService" class="com.codegym.c06springgreeting.service.EmployeeService">
+    </bean>
 </beans>
