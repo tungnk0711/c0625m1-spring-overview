@@ -22,13 +22,13 @@ public class CustomerController {
     public String index(Model model) {
         List<Customer> customerList = customerService.findAll();
         model.addAttribute("customers", customerList);
-        return "/index";
+        return "/customer/index";
     }
 
     @GetMapping("/create")
     public String create(Model model) {
         model.addAttribute("customer", new Customer());
-        return "/create";
+        return "/customer/create";
     }
 
     @PostMapping("/save")
@@ -37,6 +37,6 @@ public class CustomerController {
         int rand = random.nextInt();
         customer.setId(rand);
         customerService.save(customer);
-        return "/create";
+        return "/customer/create";
     }
 }
