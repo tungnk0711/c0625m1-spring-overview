@@ -1,9 +1,14 @@
 package com.codegym.c06springgreeting.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "customers")
 public class Customer {
 
     // POJO Class
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String email;

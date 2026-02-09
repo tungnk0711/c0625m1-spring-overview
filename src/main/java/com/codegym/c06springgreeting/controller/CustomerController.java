@@ -33,9 +33,6 @@ public class CustomerController {
 
     @PostMapping("/save")
     public String save(@ModelAttribute("customer") Customer customer){
-        Random random = new Random();
-        int rand = random.nextInt();
-        customer.setId(rand);
         customerService.save(customer);
         return "/customer/create";
     }
